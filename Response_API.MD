@@ -5,14 +5,14 @@ URL: `localhost:8080/api/v1/customer`
 Content-Type: application/json
 
 input :
-`
+```
 {
     "customer name" : "Wandi Subarkah"
 }
-`
+```
 
 Response :
-`
+```
 {
     "meta": {
         "message": "Success to create customer",
@@ -24,24 +24,25 @@ Response :
         "customer name": "Wandi Subarkah"
     }
 }
-`
+```
+
 # Create Order
 Method: `POST`
 URL: `localhost:8080/api/v1/order`
 Content-Type: application/json
 
 input :
-`
+```
 {
     "customer_id" : 5,
     "items_code" : "ip512pr4mx",
     "description" : "Iphone xs Max 512 GB",
     "quantity" : 1
 }
-`
+```
 
 Response if customer_id Not Found:
-`
+```
 {
     "meta": {
         "message": "Failed to create order, customer id not found",
@@ -50,10 +51,10 @@ Response if customer_id Not Found:
     },
     "data": null
 }
-`
+```
 
-Response success:
-`
+Response succes:
+```
 {
     "meta": {
         "message": "Success to create order",
@@ -71,7 +72,7 @@ Response success:
         }
     }
 }
-`
+```
 
 # Update Order
 Method: `PUT`
@@ -79,17 +80,17 @@ URL: `localhost:8080/api/v1/order/:id`
 Content-Type: application/json
 
 input :
-`
+```
 {
     "customer_id" : 7,
     "items_code" : "tesUpdate53",
     "description" :"descUpdate53",
     "quantity" : 5
 }
-`
+```
 
 Response : 
-`
+```
 {
     "meta": {
         "message": "Success to update Order",
@@ -107,14 +108,14 @@ Response :
         }
     }
 }
-`
+```
 
 # Get All Orders
 Method: `GET`
 URL: `localhost:8080/api/v1/orders`
 Content-Type: application/json
 Response :
-`
+```
 {
     "meta": {
         "message": "Orders",
@@ -194,14 +195,14 @@ Response :
         }
     ]
 }
-`
+```
 
 # Delete Order
 Method: `DELETE`
 URL: `localhost:8080/api/v1/delete/:id`
 Content-Type: application/json
 Response : 
-`
+```
 {
     "meta": {
         "message": "Success delete Order",
@@ -219,4 +220,4 @@ Response :
         }
     }
 }
-`
+```
